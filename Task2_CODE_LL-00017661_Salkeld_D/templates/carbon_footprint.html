@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Carbon Footprint Calculator</title>
+        <link rel="stylesheet" type ="text/css"  href="{{ url_for('static', filename='styles.css' )  }}">
+    </head>
+    <body><!--Simple and easy to use navigation bar that guides user to what they are looking for-->
+        <nav>
+            <a href = "/homepage">Home</a>
+            <a href = "/bookings">Checkout</a>
+            <a href = "/List">List of Stock</a>
+            <a href = "/Information">Information</a>
+            <a href = "/carbon-footprint">Calculate Your Carbon Footprint</a>
+        </nav>
+        <h1>Carbon Footprint Calculator</h1>
+        <form action="/carbon-footprint" method="post">
+            <label for="energy_use">Energy Use (kWh):</label>
+            <input type="number" id="energy_use" name="energy_use" step="0.1" required><br><br>
+            
+            <label for="travel_distance">Travel Distance (km):</label>
+            <input type="number" id="travel_distance" name="travel_distance" step="0.1" required><br><br>
+            
+            <label for="diet_type">Diet Type:</label>
+            <select id="diet_type" name="diet_type" required>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="mixed">Mixed</option>
+            </select><br><br>
+            
+            <button type="submit">Calculate</button>
+        </form>
+        
+        {% if total_emissions %}
+            <hr>
+            <h2>Your Results</h2>
+            <p>Energy Use: {{ energy_use }} kWh</p>
+            <p>Travel Distance: {{ travel_distance }} km</p>
+            <p>Diet Type: {{ diet_type }}</p>
+            <p>Energy Emissions: {{ energy_emissions }} kg CO2e</p>
+            <p>Travel Emissions: {{ travel_emissions }} kg CO2e</p>
+            <p>Diet Emissions: {{ diet_emissions }} kg CO2e</p>
+            <h3>Total Emissions: {{ total_emissions }} kg CO2e</h3>
+        {% endif %}
+    </body>
+    </html>
+</html>

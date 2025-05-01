@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmed</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="confirmation">
+        <h1>Booking Confirmed!</h1>
+        <p>Thank you, {{ full_name }}. For ordering with Rolsa Technologies. Your order  <strong>{{ equipment_booked }}</strong>  <strong>{{ uk_date_of_visit }}</strong> has been recorded on the date below.</p>
+        <p>Date of Booking: <strong>{{ date_of_booking }}</strong></p>
+        <a href="/homepage" class="button">Return to Home Page</a>
+    </div>
+</body>
+</html>

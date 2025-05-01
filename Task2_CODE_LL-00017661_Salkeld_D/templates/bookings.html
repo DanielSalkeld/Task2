@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Rolsa technologies </title>
+
+        <link rel="stylesheet" type ="text/css"  href="{{ url_for('static', filename='styles.css' )  }}">
+    </head>
+
+    <body><!--Simple and easy to use navigation bar that guides user to what they are looking for-->
+        <nav>
+            <a href ="/homepage">Home</a>
+            <a href ="/bookings">Checkout</a>  
+            <a href ="/List">List of Stock</a>
+            <a href = "/Information">Information</a>
+            <a href = "/carbon-footprint">Calculate Your Carbon Footprint</a>
+        </nav>
+        <h1>Welcome to the Checkout Page Please fill in what you are looking for below and we will be in contract with you shortly!</h1>
+        <form method="POST">
+            Full name : <input type="text" name="full_name" required><br>
+            Account ID : <input type="number" name="studentID" minlength="8" required><br>
+            Item or consultation/installation booked : <input type="equipment" name="equipment" required><br>
+            Date of booking : <input type="date" name="date_of_booking" required><br>
+            Payment information(Card number) : <input type="number" name="days" min="16" required><br>
+            <input type="submit" name="submit booking">
+        </form>
+        <footer>&copy; 2025 Rolsa technologies </footer>
+        <script> src="{{ url_for('static' , filename ='script.js') }}"</script>
+    </body>
+</html>

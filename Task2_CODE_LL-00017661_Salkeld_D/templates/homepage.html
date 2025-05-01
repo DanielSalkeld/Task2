@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rolsa technologies</title>
+
+        <link rel="stylesheet" type="text/css" href ="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <div class="homepage"></div>
+    <body><!--Simple and easy to use navigation bar that guides user to what they are looking for-->
+        <nav>
+            <a href = "/homepage">Home</a>
+            <a href = "/bookings">Checkout</a>
+            <a href = "/List">List of Stock</a>
+            <a href = "/Information">Information</a>
+            <a href = "/carbon-footprint">Calculate Your Carbon Footprint</a>
+        </nav>
+        <h1>Welcome to Rolsa Technologies Please take a look at the list of items and information,Then proceed to check out for a healthy environment.</h1>
+         
+        <h1>•	What is a carbon footprint? - Any person or business can have a carbon footprint. This is a calculated total of how much carbon you emit in your daily activities. This can include, for example, how you choose to travel, which foods you eat and how you use energy throughout your home. Each aspect of your routine can directly or indirectly contribute to your carbon emission footprint. </h1>
+        <nav><a href = "/">Logout</a> </nav>
+        <div id="carousel" style="max-width: 1000px; margin: 20px auto;">
+            <img src="{{ url_for('static', filename='Images/Image1.jpg')}}" alt="Clover" style= "width: 100%; display: block;">
+            <img src="{{ url_for('static', filename='Images/Image2.jpg')}}" alt ="House" style="width: 100%; display: block;">
+            <img src="{{ url_for('static', filename='Images/Image3.jpg')}}" alt ="Leaf" style="width: 100%; display: block;">
+        </div>
+        <footer>&copy; Rolsa technologies</footer>
+        <script> src ="{{ url_for('static', filename ='script.js')}}"</script>
+    </body>
+
+</html>
